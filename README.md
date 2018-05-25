@@ -48,12 +48,12 @@ When running the script you'll get a quick report like this:
 ```bash
 WHAT HAPPENED?
 
-Your file: dnis.txt
-Encrypted file: listdnis.txt
-Parsed dni in dnis.txt : 5
-Parsed sha256 in listdnis.txt : 4
-Was not found in dnis.txt when comparing to listdnis.txt : 1 dni
-Was found in dnis.txt when comparing to listdnis.txt : 4 dni
+Your file: your-file.txt
+Encrypted file: your-sha256-list.txt
+Parsed emails in your-file.txt : 5
+Parsed sha256 in your-sha256-list.txt : 4
+Was not found in your-file.txt when comparing to your-sha256-list.txt : 1 emails
+Was found in your-file.txt when comparing to your-sha256-list.txt : 4 emails
 ```
 
 ### Results

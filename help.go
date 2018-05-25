@@ -15,8 +15,8 @@ Compares specific data in a text file with an encrypted list.
 
 Use as in the 2 following examples:
 
-./ecompare -data=emails -file=myfile.txt -list=encrypted.txt
-./ecompare -data=dni -file=myfile.txt -list=encrypted.txt
+./ekomp -data=emails -file=myfile.txt -list=encrypted.txt
+./ekomp -data=dni -file=myfile.txt -list=encrypted.txt
 
 This script always creates 2 files in the current folder with the results: 
 
@@ -34,7 +34,7 @@ Comand line options:
 -file=myfile.txt	File to check
 -list=encrypted.txt	File with the encrypted data
 -debug=true		Debug the script					
--trash			To delete the 2 files created by ecompare
+-trash			To delete the 2 files created by ekomp
 
 `
 	fmt.Printf(textToPrint)
