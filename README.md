@@ -20,12 +20,25 @@ Ekomp has better performance than other tools. It takes about 18 seconds to comp
 
 ### Create encrypted lists
 
-You should use **[ecounter](https://github.com/greenpeace/gpes-ecounter)** to create an encrypted lists with emails or dnis. 
+You can use **[ecounter](https://github.com/greenpeace/gpes-ecounter)** to create an encrypted lists with emails or dnis.
 
 * Encrypted email lists use sha256 over lowercased email addresses *(your.name@domain.com)*
 * Encrypted "DNI" lists use sha256 over uppercased Spanish ID numbers. *(64580957Q or X9137239Y)*
 
-Please note: If you use another tool to create sha256 files don't forget that using uppercase for ID numbers and lowercase for emails is crucial.
+You can also use other tools to hash emails or DNIs. Here's how to do it with MySQL 5.6+:
+
+```SQL
+SELECT SHA2(email, 256) AS 'email' FROM en_users;
+```
+
+and with Open Refine (Python):
+
+```python
+import hashlib
+return hashlib.sha256(value).hexdigest()
+```
+
+**Please note:** If you use another tool to create sha256 files don't forget that using uppercase for ID numbers and lowercase for emails is crucial.
 
 ### Compare your data with an encrypted list
 
